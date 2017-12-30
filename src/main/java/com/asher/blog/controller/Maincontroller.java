@@ -72,21 +72,27 @@ public class Maincontroller {
     @RequestMapping("/article")
     public String article(Model model) {
         model.addAttribute("name", "Dear");
-        return "article";
+        return "article/article";
     }
 
 
     @RequestMapping("/timeline")
     public String timeline(Model model) {
         model.addAttribute("name", "Dear");
-        return "timeline";
+        return "article/timeline";
+    }
+
+    @RequestMapping("/aboutme")
+    public String aboutme(Model model) {
+        model.addAttribute("name", "Dear");
+        return "aboutme/aboutme";
     }
 
 
-    @RequestMapping("/img")
-    public String img(Model model) {
+    @RequestMapping("/message")
+    public String message(Model model) {
         model.addAttribute("name", "Dear");
-        return "img";
+        return "message/message";
     }
 
     @RequestMapping("/login")

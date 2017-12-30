@@ -1,213 +1,138 @@
 <!doctype html>
 <html>
 <head>
-    <title>AsherBlog-全部文章</title>
+    <title>Asher-blog</title>
     <div th:replace="common/meta :: meta"></div>
     <div th:replace="common/link :: link"></div>
 </head>
 
 <body id="blog-article-sidebar">
 <!-- 头部 -->
-<div th:replace="common/header :: header"></div>
+    <div th:replace="common/header :: header"></div>
 
+
+
+<!-- content srart -->
 <div class="am-g am-g-fixed blog-fixed blog-content">
-    <div class="am-u-md-8 am-u-sm-12">
-        <article class="am-article blog-article-p">
-            <div class="am-article-hd">
-                <h1 class="am-article-title blog-text-center">我的文章哎</h1>
-                <p class="am-article-meta blog-text-center">
-                    <span><a href="#" class="blog-color">article &nbsp;</a></span>-
-                    <span><a href="#">@amazeUI &nbsp;</a></span>-
-                    <span><a href="#">2015/10/9</a></span>
-                </p>
-            </div>
-            <div class="am-article-bd">
-                <img src="" th:src="@{images/f10.jpg}" alt="" class="blog-entry-img blog-article-margin"/>
-                <p class="am-article-lead">
+    <div class="am-u-sm-12">
+      <article class="am-article blog-article-p">
+        <div class="am-article-hd">
+          <h1 class="am-article-title blog-text-center">我的文章哎</h1>
+          <p class="am-article-meta blog-text-center">
+              <span><a href="#" class="blog-color">article &nbsp;</a></span>-
+              <span><a href="#">@amazeUI &nbsp;</a></span>-
+              <span><a href="#">2015/10/9</a></span>
+          </p>
+        </div>        
+        <div class="am-article-bd">
+        <img src="assets/i/f17.jpg" th:src="@{images/f17.jpg}" alt="" class="blog-entry-img blog-article-margin"/>
+        <p class="am-article-lead">
+         炊烟 <br/>
+／阿城 <br/><br/>
 
-                    引用blockquote：
-                    <blockquote>
-                <p>People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means
-                    at
-                    all. It means saying no to the hundred other good ideas that there are. You have to pick carefully.
-                    I’m
-                    actually as proud of the things we haven’t done as the things I have done. Innovation is saying no
-                    to
-                    1,000 things.</p>
-                <footer><cite>Steve Jobs</cite> – Apple Worldwide Developers’ Conference, 1997</footer>
-                </blockquote>
-                <h1>这是标题</h1>
-                <h2>这是标题</h2>
-                <h3>这是标题</h3>
-                <h4>这是标题</h4>
-                <h5>这是标题</h5>
-                <h1>HEADER ONE</h1>
-                <h2>HEADER ONE</h2>
-                <h3>HEADER ONE</h3>
-                <h4>HEADER ONE</h4>
-                <h5>HEADER ONE</h5>
-                <h1>表格:</h1>
-                <table class="am-table am-table-bordered">
-                    <thead>
-                    <tr>
-                        <th>网站名称</th>
-                        <th>网址</th>
-                        <th>创建时间</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>Amaze UI</td>
-                        <td>http://amazeui.org</td>
-                        <td>2012-10-01</td>
-                    </tr>
-                    <tr>
-                        <td>Amaze UI</td>
-                        <td>http://amazeui.org</td>
-                        <td>2012-10-01</td>
-                    </tr>
-                    <tr>
-                        <td>Amaze UI(Active)</td>
-                        <td>http://amazeui.org</td>
-                        <td>2012-10-01</td>
-                    </tr>
-                    <tr>
-                        <td>Amaze UI</td>
-                        <td>http://amazeui.org</td>
-                        <td>2012-10-01</td>
-                    </tr>
-                    <tr>
-                        <td>Amaze UI</td>
-                        <td>http://amazeui.org</td>
-                        <td>2012-10-01</td>
-                    </tr>
-                    </tbody>
-                </table>
-                <h1>自定义列表:</h1>
-                <ul class="am-list am-list-border">
-                    <li><a href="#"><i class="am-icon-home am-icon-fw"></i>
-                        每个人都有一个死角， 自己走不出来，别人也闯不进去。</a></li>
-                    <li><a href="#"> <i class="am-icon-book am-icon-fw"></i>
-                        我把最深沉的秘密放在那里。</a></li>
-                    <li><a href="#"><i class="am-icon-pencil am-icon-fw"></i>你不懂我，我不怪你。</a></li>
-                </ul>
-                <h1>有序列表:</h1>
-                <ol>
-                    <li>List item one
-                        <ol>
-                            <li>List item one
-                                <ol>
-                                    <li>List item one</li>
-                                    <li>List item two</li>
-                                    <li>List item three</li>
-                                    <li>List item four</li>
-                                </ol>
-                            </li>
-                            <li>List item two</li>
-                            <li>List item three</li>
-                            <li>List item four</li>
-                        </ol>
-                    </li>
-                    <li>List item two</li>
-                    <li>List item three</li>
-                    <li>List item four</li>
-                </ol>
-                <h1>无序列表:</h1>
-                <ul>
-                    <li>List item one
-                        <ul>
-                            <li>List item one
-                                <ul>
-                                    <li>List item one</li>
-                                    <li>List item two</li>
-                                    <li>List item three</li>
-                                    <li>List item four</li>
-                                </ul>
-                            </li>
-                            <li>List item two</li>
-                            <li>List item three</li>
-                            <li>List item four</li>
-                        </ul>
-                    </li>
-                    <li>List item two</li>
-                    <li>List item three</li>
-                    <li>List item four</li>
-                </ul>
-                <h1>一大段文字：</h1>
-                <p>
-                    我遇见了你，你一直觉得自己不够美好，充满惊慌与卑微，但是，你即使那样害怕，却守在我的身后，不曾后退。人们总是崇拜英雄，惊喜与他们随时随地的光芒，但是最真实的事情永远是我们都会恐惧都会失败，有时受尽打击，又是无能为力。你说我是英雄，其实我不敢告诉你，如果不是你，你傻傻地倔强地站在那里，我一回头就能看见你，那么，或许，我早就做了命运的逃兵。<br/><br/>
-                    红衣佳人白衣友，朝与同歌暮同酒，世人谓我恋长安，其实只恋长安某。 ——殊同 <br/>
 
-                    水银泻地的时候，忧愁穿过墙壁，又和着嘶哑的音乐，使我羞惭、灰心。整个夏季，仿佛一场，没有主题的游戏。 ——赵野 <br/>
+老张得了一个闺女。老张说，挺好，就是大了别长得像我，那可嫁不出去了。因此，女儿名美丽，自然姓张。 
 
-                    我感到自己仿佛变得蔚蓝，变得无边无际，眼睛和指尖上，栖息着无数的星辰。 ——马林·索雷斯库 <br/>
+老张的大学同学都说，叫个美丽，没什么不好，就是俗了点。老张你也是读过书的人，怎么不能想个雅点儿的呢？ 
+<br/>
+老张说，俗有什么不好？实惠。这年头你还想怎么着？结结实实的吧。 <br/>
 
-                    手中的书页犹如薄薄的剃刀片白亮亮闪着寒光。在凌晨四时寂寞的时刻里，我可以听到孤独之根正一点点伸长的声音。 ——村上春树 <br/>
+老张的同学说，结实？那叫矿石好了，叫火成岩，水成岩也成。咱们这行就是学了个结实。<br/>
 
-                    你的明眸是映现我灵魂颤动的湖，我那成群结队的梦想，为寻求解脱，而纷纷投入你这秋波深处。 ——波德莱尔 <br/>
+老张在大学读的地质。 <br/>
 
-                    当我们只剩下虚无，唯有沉默的太阳够好，是你的静寂，是无声的声音。 ——佩索阿
-                </p>
-                </p>
-            </div>
-        </article>
+老张疼闺女。 <br/>
 
-        <div class="am-g blog-article-widget blog-article-margin">
-            <div class="am-u-lg-4 am-u-md-5 am-u-sm-7 am-u-sm-centered blog-text-center">
-                <span class="am-icon-tags"> &nbsp;</span><a href="#">标签</a> , <a href="#">TAG</a> , <a href="#">啦啦</a>
-                <a href=""><span class="am-icon-qq am-icon-fw am-primary blog-icon"></span></a>
-                <a href=""><span class="am-icon-wechat am-icon-fw blog-icon"></span></a>
-                <a href=""><span class="am-icon-weibo am-icon-fw blog-icon"></span></a>
-            </div>
+老张抽烟。<br/><br/>
+老张的老婆说，你要想要孩子，就把烟忌了，书上说，大人抽烟，会影响胎儿的基因。老张正抽到了一半儿，马上扔掉，用脚碾灭，戒了。美丽生出来了，老张买了一包烟。老张的老婆说，你叫美丽从小肺就是黑的吗？老张凄凄的样子。老张的老婆说，你抽吧，别在美丽的旁边儿抽。 <br/>
+
+美丽是冬天生的。春天了，老张的老婆抱着美丽出来晒太阳。起风了，老张说，还不回去，看吹着。老张的老婆说，不晒太阳，美丽吃的钙根本就吸收不了。老张说，那就屋里窗户边儿上晒嘛。老张的老婆说，紫外线透不过玻璃，人体吸收钙，靠的就是个紫外线，隔着玻璃，还不是白晒。老张说，那就等风停了。 <br/>
+
+老张瞧着老婆给美丽喂奶。老张的老婆书也念得不少，瞧老张老盯着，说，还没瞧够呀，又不是没瞧过。老张说，谁瞧你了，我是怕美丽吃不饱。俩人都笑了，美丽换过一口气，也笑了。 <br/><br/>
+
+秋天了，美丽大了点儿，手会指东西，指妈妈，指爸爸，还会抓耳朵，抓妈妈的头发，抓爸爸的鼻子。 <br/>
+
+有一天，老张的老婆抱着美丽，老张在旁边挤眉弄眼，逗得美丽嘎嘎乐，两只小手儿奓着。老张的老婆把美丽凑到老张的脸前，美丽的手就伸进爸爸的嘴里。 <br/>
+
+说时迟，那时快，老张抬手就是一掌，把母女两个打了个趔趄。老张在地质队，天天握探锤打石头，手上总有百来斤的力气。老张的老婆没有提防，就跌到了。到底是母亲，着地的关头，一扭身仰着将美丽抓在胸口。 <br/>
+
+美丽大哭。老张的老婆脑后淌出血来，从来没有骂过人的人，骂人了，老张的老婆骂老张。<br/>
+
+老张呆了，浑身哆嗦着，喘不出气来，汗从头上淌进领子里。 <br/>
+
+老张进了医院，两天一夜，才说出话来—— <br/><br/>
+
+六零年，闹饥荒，饿死人，全国都闹，除了云南。那年，我毕业实习，进山找矿。 <br/>
+
+后来，我迷路了。有指南针，没用。我饿，我饿呀。慌，心慌，一慌就急。本来还会想，这下完了。一直就吃不够，体力差，肝里的糖说耗完就耗完。后来就出汗，后来汗也不出了。什么也不敢想，用脑子最消耗热量了。躺着。胃里冒酸水儿，杀得牙软。 <br/>
+
+后来，从肚子开始发热，脚心，脖子，指头尖儿，越来越烫。安徒生不是写过个卖火柴的小女孩儿吗？这个丹麦的老东西，他写得对。人饿死前，就是发热，热过了，就是死。 <br/>
+我没死。死了怎么还能跟你结婚？怎么还能有美丽？ <br/><br/>
+
+我醒的时候，好半天才看得清东西。我瞧见远处有烟。当时，我只有一个念头儿，烧饭才会有烟。爬吧。<br/> 
+
+就别说怎么才爬到了吧。到了，是个人家。我趴在门口说，救个命吧，给口吃的吧。没人应。对，可能我的声音太小。我进去了。 <br/>
+
+灶前头靠着个人瘦得牙龇着，眼睛亮得吓人。我说，给口吃的。那人半天才摇摇头。我说，你就是我爷爷，祖宗，给口吃的吧。那人还是摇头。我说，你是说没有吗？那你这灶上烧的什么？喝口热水也行啊。那人眼泪就流下来了。 <br/>
+
+我不管了，伸手就把锅盖揭了。水气散了，我看见了，锅里煮着个小孩儿的手。
+        </p>
         </div>
-
+      </article>
+        
+        <div class="am-g blog-article-widget blog-article-margin">
+          <div class="am-u-lg-4 am-u-md-5 am-u-sm-7 am-u-sm-centered blog-text-center">
+            <span class="am-icon-tags"> &nbsp;</span><a href="#">标签</a> , <a href="#">TAG</a> , <a href="#">啦啦</a>
+            <a href=""><span class="am-icon-qq am-icon-fw am-primary blog-icon"></span></a>
+            <a href=""><span class="am-icon-wechat am-icon-fw blog-icon"></span></a>
+            <a href=""><span class="am-icon-weibo am-icon-fw blog-icon"></span></a>
+          </div>
+        </div>
 
         <div class="am-g blog-author blog-article-margin">
-            <div class="am-u-sm-3 am-u-md-3 am-u-lg-2">
-                <img src="/static/images/f15.jpg" th:src="@{images/f15.jpg}" alt="" class="blog-author-img am-circle"/>
-            </div>
-            <div class="am-u-sm-9 am-u-md-9 am-u-lg-10">
-                <h3><span>作者 &nbsp;: &nbsp;</span><span class="blog-color">amazeui</span></h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.</p>
-            </div>
+          <div class="am-u-sm-3 am-u-md-3 am-u-lg-2">
+            <img src="assets/i/f15.jpg" alt="" class="blog-author-img am-circle"/>
+          </div>
+          <div class="am-u-sm-9 am-u-md-9 am-u-lg-10">
+          <h3><span>作者 &nbsp;: &nbsp;</span><span class="blog-color">amazeui</span></h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
         </div>
         <ul class="am-pagination blog-article-margin">
-            <li class="am-pagination-prev"><a href="#" class="">&laquo; 一切的回顾</a></li>
-            <li class="am-pagination-next"><a href="">不远的未来 &raquo;</a></li>
+          <li class="am-pagination-prev"><a href="#" class="">&laquo; 一切的回顾</a></li>
+          <li class="am-pagination-next"><a href="">不远的未来 &raquo;</a></li>
         </ul>
+        
+
         <form class="am-form am-g">
             <h3 class="blog-comment">评论</h3>
-            <fieldset>
-                <div class="am-form-group am-u-sm-4 blog-clear-left">
-                    <input type="text" class="" placeholder="名字"/>
-                </div>
-                <div class="am-form-group am-u-sm-4">
-                    <input type="email" class="" placeholder="邮箱"/>
-                </div>
+          <fieldset>
+            <div class="am-form-group am-u-sm-4 blog-clear-left">
+              <input type="text" class="" placeholder="名字"/>
+            </div>
+            <div class="am-form-group am-u-sm-4">
+              <input type="email" class="" placeholder="邮箱"/>
+            </div>
 
-                <div class="am-form-group am-u-sm-4 blog-clear-right">
-                    <input type="password" class="" placeholder="网站"/>
-                </div>
-                <div class="am-form-group">
-                    <textarea class="" rows="5" placeholder="一字千金"></textarea>
-                </div>
-                <p>
-                    <button type="submit" class="am-btn am-btn-default">发表评论</button>
-                </p>
-            </fieldset>
+            <div class="am-form-group am-u-sm-4 blog-clear-right">
+              <input type="password" class="" placeholder="网站"/>
+            </div>
+        
+            <div class="am-form-group">
+              <textarea class="" rows="5" placeholder="一字千金"></textarea>
+            </div>
+        
+            <p><button type="submit" class="am-btn am-btn-default">发表评论</button></p>
+          </fieldset>
         </form>
+
+
     </div>
-    <!-- 侧边栏 -->
-    <div th:replace="common/sidebar :: sidebar"></div>
 </div>
+
 <!-- 底部 -->
 <div th:replace="common/footer :: footer"></div>
-
-
 </body>
-
 <!-- 通用js引入 -->
 <div th:replace="common/script :: script"></div>
 </html>
