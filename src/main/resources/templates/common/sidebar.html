@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<!-- <div th:include="common/sidebar :: sidebar"></div> -->
+
+<div th:fragment="sidebar" >
+    <div class="col-xs-11 col-md-11 col-lg-11 sidebar ">
+        <div class="text-center">
+            <h2 class="text-center sidebar-title"><span>关于我</span></h2>
+            <img src="" th:src="@{images/f14.jpg}" alt="关于我" class="sidebar-img img-polaroid"/>
+            <p>Asher</p>
+            <p>
+                我是Asher，好奇心很强的程序员.
+            </p>
+            <p>我不想成为一个庸俗的人。十年百年后，当我们死去，质疑我们的人同样死去，后人看到的是裹足不前、原地打转的你，还是一直奔跑、走到远方的我？</p>
+        </div>
+    </div>
+    <div class="col-xs-11 col-md-11 col-lg-11 sidebar">
+        <h2 class="sidebar-title"><span>点击排行</span></h2>
+        <ul class="am-list">
+            <li><a href="#">每个人都有一个死角， 自己走不出来，别人也闯不进去。</a></li>
+            <li><a href="#">我把最深沉的秘密放在那里。</a></li>
+            <li><a href="#">你不懂我，我不怪你。</a></li>
+            <li><a href="#">每个人都有一道伤口， 或深或浅，盖上布，以为不存在。</a></li>
+        </ul>
+    </div>
+    <div class="col-xs-11 col-md-11 col-lg-11 sidebar">
+        <h2 class="sidebar-title"><span>最新评论</span></h2>
+        <ul class="am-list">
+            <li><a href="#">每个人都有一个死角， 自己走不出来，别人也闯不进去。</a></li>
+            <li><a href="#">我把最深沉的秘密放在那里。</a></li>
+            <li><a href="#">你不懂我，我不怪你。</a></li>
+            <li><a href="#">每个人都有一道伤口， 或深或浅，盖上布，以为不存在。</a></li>
+        </ul>
+    </div>
+    <div class="col-xs-11 col-md-11 col-lg-11 sidebar">
+        <h2 class="sidebar-title"><span>最新评论</span></h2>
+        <ul class="am-list">
+            <li><a href="#">每个人都有一个死角， 自己走不出来，别人也闯不进去。</a></li>
+            <li><a href="#">我把最深沉的秘密放在那里。</a></li>
+            <li><a href="#">你不懂我，我不怪你。</a></li>
+            <li><a href="#">每个人都有一道伤口， 或深或浅，盖上布，以为不存在。</a></li>
+        </ul>
+    </div>
+    <div class="col-xs-11 col-md-11 col-lg-11 sidebar">
+        <h2 class="sidebar-title"><span>标签云</span></h2>
+        <div class="am-u-sm-12 blog-clear-padding">
+            <a href="" class="label label-default">Java</a>
+            <a href="" class="label label-primary">JavaScript</a>
+            <a href="" class="label label-success">HTML5</a>
+            <a href="" class="label label-info">SpringJPA</a>
+            <a href="" class="label label-warning">SpringSecurity</a>
+            <a href="" class="label label-danger">SpringBoot</a>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

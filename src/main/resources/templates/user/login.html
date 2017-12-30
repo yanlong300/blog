@@ -1,0 +1,48 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Asher-blog</title>
+    <div th:replace="common/meta :: meta"></div>
+    <div th:replace="common/link :: link"></div>
+</head>
+<body>
+<!-- 头部 -->
+<div th:replace="common/header :: header"></div>
+
+<div class="log">
+    <div class="am-g">
+        <div class="am-u-lg-3 am-u-md-6 am-u-sm-8 am-u-sm-centered log-content">
+            <h1 class="log-title am-animation-slide-top">登录博客</h1>
+            <br/>
+            <form class="am-form" id="log-form">
+                <div class="am-input-group am-radius am-animation-slide-left">
+                    <input type="email" id="doc-vld-email-2-1" class="am-radius" data-validation-message="请输入正确邮箱地址"
+                           placeholder="邮箱"/>
+                    <span class="am-input-group-label log-icon am-radius"><i
+                            class="am-icon-user am-icon-sm am-icon-fw"></i></span>
+                </div>
+                <br/>
+                <div class="am-input-group am-animation-slide-left log-animation-delay">
+                    <input type="text" class="am-form-field am-radius log-input" placeholder="密码" minlength="11"/>
+                    <span class="am-input-group-label log-icon am-radius"><i
+                            class="am-icon-lock am-icon-sm am-icon-fw"></i></span>
+                </div>
+                <br/>
+                <button type="submit"
+                        class="am-btn am-btn-primary am-btn-block am-btn-lg am-radius am-animation-slide-bottom log-animation-delay">
+                    登 录
+                </button>
+                <p class="am-animation-slide-bottom log-animation-delay"><a href="#">忘记密码?</a></p>
+
+            </form>
+        </div>
+    </div>
+    <footer class="log-footer">
+        <div th:replace="common/copyright :: copyright"></div>
+    </footer>
+</div>
+
+</body>
+<!-- 通用js引入 -->
+<div th:replace="common/script :: script"></div>
+</html>

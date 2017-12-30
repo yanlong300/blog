@@ -1,0 +1,22 @@
+.sidebar {
+    margin-top:2rem;
+    margin-bottom:2rem;
+    border:1px solid #e5e5e5;
+}
+.sidebar:hover {
+    border:1px solid #929292;
+}
+.sidebar-title {
+    margin-top:-1.5rem;
+    text-align:center;
+}
+.sidebar-title span{
+    background-color:#fff;
+    padding:0 1.5rem;
+}
+
+.sidebar-img {
+    padding:0;
+    max-width:100%;
+    height:auto;
+}

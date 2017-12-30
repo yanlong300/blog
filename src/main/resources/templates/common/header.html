@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<header class="am-g am-g-fixed blog-fixed blog-text-center blog-header">
+    <div class="am-u-sm-8 am-u-sm-centered">
+    </div>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#" th:href="@{index}">Asher博客</a>
+        </div>
+
+        <div>
+            <ul class="nav navbar-nav navbar-left">
+                <li class="active am-active">
+                    <a href="#" th:href="@{index}" >首页</a>
+                </li>
+                <li><a href="#" th:href="@{article}" >全部文章</a></li>
+                <li><a href="#" th:href="@{img}" >关于我</a></li>
+                <li><a href="#" th:href="@{timeline}" >留言板</a></li>
+                <li><a href="#" th:href="@{timeline}" >文章存档</a></li>
+            </ul>
+            <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search"/>
+                </div>
+                <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"/></button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <button type="button" onclick="javascript:window.location.href='login' " class="btn btn-default navbar-btn"><span class="glyphicon glyphicon-log-in"/> 登录 </button>
+                </li>
+                <li> &nbsp; &nbsp; &nbsp;</li>
+                <li>
+                    <button type="button" onclick="javascript:window.location.href='regist' " class="btn btn-default navbar-btn"><span class="glyphicon glyphicon-user"/> 注册 </button>
+                </li>
+                <li> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</li>
+            </ul>
+        </div>
+    </nav>
+</header>
+</body>
+</html>
