@@ -1,8 +1,8 @@
 <!doctype html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Asher-blog</title>
-    <div th:replace="common/meta :: meta"></div>
+    <meta th:replace="common/meta :: meta"/>
     <div th:replace="common/link :: link"></div>
 </head>
 
@@ -25,7 +25,7 @@
           </p>
         </div>        
         <div class="am-article-bd">
-        <img src="assets/i/f17.jpg" th:src="@{images/f17.jpg}" alt="" class="blog-entry-img blog-article-margin"/>
+        <img src="/static/images/f17.jpg" th:src="@{images/f17.jpg}" alt="" class="blog-entry-img blog-article-margin"/>
         <p class="am-article-lead">
          炊烟 <br/>
 ／阿城 <br/><br/>
@@ -91,7 +91,7 @@
 
         <div class="am-g blog-author blog-article-margin">
           <div class="am-u-sm-3 am-u-md-3 am-u-lg-2">
-            <img src="assets/i/f15.jpg" alt="" class="blog-author-img am-circle"/>
+            <img src="/static/images/f15.jpg" th:src="@{images/f15.jpg}" alt="" class="blog-author-img am-circle"/>
           </div>
           <div class="am-u-sm-9 am-u-md-9 am-u-lg-10">
           <h3><span>作者 &nbsp;: &nbsp;</span><span class="blog-color">amazeui</span></h3>
