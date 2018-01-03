@@ -21,9 +21,19 @@ public class ArticleController {
 
     @RequestMapping("/summary/{id}")
     @ResponseBody
-    public String selectArticle(@PathVariable String id){
+    public String ArticleSummary(@PathVariable String id){
         //20161006230324032010005
         BlogArticle art = blogArticleService.selectByPrimaryKey(id);
         return art.toString();
     }
+
+    @RequestMapping("/content/{id}")
+    @ResponseBody
+    public String ArticleContent(@PathVariable String id){
+        //20161006230324032010005
+        BlogArticle art = blogArticleService.selectByPrimaryKey(id);
+        return art.toString();
+    }
+
+
 }
