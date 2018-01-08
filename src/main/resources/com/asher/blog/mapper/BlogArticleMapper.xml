@@ -23,6 +23,11 @@
     <result column="ART_SHORT_PIC" jdbcType="VARCHAR" property="artShortPic" />
     <result column="EDITOR_TYPE" jdbcType="INTEGER" property="editorType" />
   </resultMap>
+
+  <resultMap id="BlogArticleAllResultMap" type="com.asher.blog.entity.BlogArticleAll" extends="BaseResultMap">
+    <result column="NICK_NAME" jdbcType="VARCHAR" property="nickName"/>
+
+  </resultMap>
   <sql id="Example_Where_Clause">
     <!--
       WARNING - @mbggenerated
@@ -443,4 +448,22 @@
       EDITOR_TYPE = #{editorType,jdbcType=INTEGER}
     where ART_ID = #{artId,jdbcType=VARCHAR}
   </update>
+
+
+    <select id="selectByExampleHasNickName" parameterType="com.asher.blog.entity.BlogArticleExample" resultMap="BlogArticleAllResultMap">
+      SELECT a.*,u.NICK_NAME FROM (
+        select
+
+        <include refid="Base_Column_List" />
+        from blog_article
+        <if test="_parameter != null">
+            <include refid="Update_By_Example_Where_Clause" />
+        </if>
+      ) a
+      LEFT JOIN (
+        SELECT USER_ID,NICK_NAME FROM blog_user
+      ) u
+      ON a.USER_ID = u.USER_ID
+      ORDER BY CREATE_TIME DESC
+    </select>
 </mapper>

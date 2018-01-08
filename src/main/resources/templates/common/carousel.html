@@ -10,24 +10,25 @@
         <div id="myCarousel" class="carousel slide">
             <!-- 轮询主体 -->
             <div class="carousel-inner">
-                <div class="active item"  th:each="Article,iterStat : ${articleList}" th:class="${iterStat.index == 0} ? 'active item':'item'" >
-                    <img src="" th:src="${Article.imageUrl}"/>
+                <div class="active item"  th:each="Article,iterStat : ${carouseList}" th:class="${iterStat.index == 0} ? 'active item':'item'" >
+                    <img src="" th:src="${Article.artShortPic}"/>
                     <div class="blog-slider-desc am-slider-desc ">
                         <div class="blog-text-center blog-slider-con">
-                            <span><a href="" class="blog-color" th:text="${Article.author}"></a></span>
-                            <h1 class="blog-h-margin"><a href="" th:text="${Article.title}"></a></h1>
-                            <p th:text="${Article.digest}"></p>
-                            <span class="blog-bor" th:text="${#dates.format(Article.createTime,'yyyy-MM-dd')}"></span>
-                            <br/><br/><br/><br/><br/><br/><br/>
+                            <span>
+                                <a href="" th:href="@{'user/'+${Article.userId}}" class="blog-color" th:text="${Article.nickName}"></a>
+                            </span>
+                            <h1 class="blog-h-margin">
+                                <a href="" th:href="@{'art/'+${Article.artId}}" th:text="${Article.artName}"></a>
+                            </h1>
+                            <p th:text="${Article.artShort}"></p>
+
                         </div>
                     </div>
                 </div>
             </div>
             <!-- 轮询按钮 -->
-            <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
+            <ol class="carousel-indicators" >
+                <li data-target="#myCarousel" data-slide-to="0" th:attr="data-slide-to=${iterStat.index}" th:each="Article,iterStat : ${carouseList}" th:class="${iterStat.index == 0} ? 'active':''" ></li>
             </ol>
             <!-- 轮询导航（箭头） -->
             <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">

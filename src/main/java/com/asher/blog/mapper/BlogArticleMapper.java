@@ -1,6 +1,7 @@
 package com.asher.blog.mapper;
 
 import com.asher.blog.entity.BlogArticle;
+import com.asher.blog.entity.BlogArticleAll;
 import com.asher.blog.entity.BlogArticleExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
@@ -98,4 +99,12 @@ public interface BlogArticleMapper {
      * @mbggenerated
      */
     int updateByPrimaryKey(BlogArticle record);
+
+    /**
+     * 查询文章包含作者名
+     * @param example
+     * @return 文章列表
+     */
+    List<BlogArticleAll> selectByExampleHasNickName(@Param("example")BlogArticleExample example);
+
 }

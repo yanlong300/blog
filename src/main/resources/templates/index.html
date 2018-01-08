@@ -20,17 +20,18 @@
 
         <!-- 文章列表 -->
         <div class="col-xs-12 col-md-12 col-lg-12">
-            <article th:each="Article : ${articleList}" class="am-g blog-entry-article">
+            <article th:each="Article : ${list}" class="am-g blog-entry-article">
                 <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-img">
-                    <img src="" th:src="${Article.imageUrl}" alt="" class="am-u-sm-12"/>
+                    <img src="" th:src="${Article.artShortPic}" alt="" class="am-u-sm-12"/>
                 </div>
                 <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-text">
-                    <span><a href="" class="blog-color">article &nbsp;</a></span>
-                    <span th:text="'@'+${Article.author}+'&nbsp;'"> @amazeUI &nbsp;</span>
-                    <span th:text="${#dates.format(Article.createTime,'yyyy-MM-dd')}">2015/10/9</span>
-                    <h1><a href="" th:text="${Article.title}">我本楚狂人，凤歌笑孔丘</a></h1>
-                    <p th:text="${Article.digest}">我们一直在坚持着，不是为了改变这个世界，而是希望不被这个世界所改变。
-                    </p>
+                    <span><a href="" class="label label-default">Java</a></span>
+                    <span><a href="" th:href="@{'user/'+${Article.userId}}"  th:text="'@'+${Article.nickName}+'&nbsp;'" class="blog-color">article &nbsp;</a></span>
+                    <span th:text="${#dates.format(Article.createTime,'yyyy-MM-dd')}"></span>
+                    <br/>
+                    <br/>
+                    <h1><a href="" th:href="@{'art/'+${Article.artId}}"  th:text="${Article.artName}"></a></h1>
+                    <p th:text="${Article.artShort}"></p>
                     <p><a href="" class="blog-continue">continue reading</a></p>
                 </div>
             </article>
